@@ -1,11 +1,11 @@
-class NegociacoesView{
-	
+class NegociacoesView {
+
 	constructor(elemento){
 		this._elemento = elemento;
 	}
 
 	_template(model) {
-		
+
 		return `
 			<table class="table table-hover table-bordered">
 	        <thead>
@@ -16,7 +16,7 @@ class NegociacoesView{
 	                <th>VOLUME</th>
 	            </tr>
 	        </thead>
-	        	
+
 	        <tbody>
 	        	${model.negociacoes.map(n =>
 	        		`
@@ -39,7 +39,7 @@ class NegociacoesView{
 	}
 
 	update(model){
-		console.log(model);
+		
 		this._elemento.innerHTML = this._template(model);
 	}
 
